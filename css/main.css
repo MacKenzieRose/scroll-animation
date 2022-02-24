@@ -1,0 +1,98 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+  box-sizing: border-box;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-family: Georgia, serif;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* START STYLING PAGE ELEMENTS */
+
+body {
+  margin: 0 auto;
+  background-color: #eee;
+}
+
+header {
+  padding: 2rem;
+}
+
+h2 {
+  margin: 2rem 2rem 0;
+}
+
+div.white-container {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  padding: 2rem;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+div.fpo-content {
+  z-index: 1000;
+}
+
+.fpo-content > img {
+  display: block;
+  width: 100%;
+}
+
+.bkg-logo {
+  width: 50%;
+  max-width: 521px;
+  animation: rotate 1s linear;
+  order: 1;
+  z-index: 0;
+}
+
+footer {
+  padding: 2rem;
+  background-color: #eee;
+  width: 100%;
+}
+
+/* END STYLING PAGE ELEMENTS */
+/* START SCROLLING SVG CODE */
+
+@keyframes rotate {
+  from {transform:rotate(-45deg);}
+    to {transform:rotate(0deg);}
+}
+
+@-webkit-keyframes rotate {
+  from {transform:rotate(-45deg);}
+    to {transform:rotate(0deg);}
+}
+
+@-moz-keyframes rotate {
+  from {transform:rotate(-45deg);}
+    to {transform:rotate(0deg);}
+}
+
+:root * {
+  /* Pause the animation */
+  animation-play-state: paused;
+  /* Bind the animation to scroll */
+  animation-delay: calc(var(--scroll) * -1s);
+  /* These last 2 properites clean up overshoot weirdness */
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+/* END SCROLLING SVG CODE */
