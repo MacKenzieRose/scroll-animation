@@ -59,7 +59,7 @@ div.fpo-content {
 .bkg-logo {
   width: 120%;
   max-width: 521px;
-  margin-left: 40px;
+  margin-left: 10%;
   animation: rotate 1s linear;
   order: 1;
   z-index: 0;
